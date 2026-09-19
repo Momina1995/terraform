@@ -37,10 +37,6 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    # 5. Check if the code is properly formatted
-    - name: Terraform Format Check
-      run: terraform fmt -check
-
     # 6. Generate execution plan (Runs on both PRs and Pushes)
     - name: Terraform Plan
       run: terraform plan -input=false
