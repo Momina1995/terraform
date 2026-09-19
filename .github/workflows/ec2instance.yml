@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 permissions:
   contents: read
@@ -33,7 +30,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
-        terraform_version: 1.6.0
+        terraform_version: 1.16.3
 
     # 4. Initialize Terraform working directory
     - name: Terraform Init
